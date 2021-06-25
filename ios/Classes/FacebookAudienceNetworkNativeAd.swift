@@ -591,15 +591,15 @@ class FacebookAudienceNetworkNativeAdView: NSObject, FlutterPlatformView, FBNati
     func nativeAd(_ nativeAd: FBNativeAd, didFailWithError error: Error) {
         print("NativeAd > nativeAd %s", error)
 
-        let placement_id: String = nativeAd.placementID
-        let invalidated: Bool = nativeAd.isAdValid
-        let errorStr: String = error as? String ?? "";
-        let arg: [String: Any] = [
-            FANConstant.PLACEMENT_ID_ARG: placement_id,
-            FANConstant.INVALIDATED_ARG: invalidated,
-            FANConstant.ERROR_ARG:errorStr
-        ]
-        self.channel.invokeMethod(FANConstant.ERROR_METHOD, arguments: arg)
+//         let placement_id: String = nativeAd.placementID
+//         let invalidated: Bool = nativeAd.isAdValid
+//         let errorStr: String = error as? String ?? "";
+//         let arg: [String: Any] = [
+//             FANConstant.PLACEMENT_ID_ARG: placement_id,
+//             FANConstant.INVALIDATED_ARG: invalidated,
+//             FANConstant.ERROR_ARG:errorStr
+//         ]
+//         self.channel.invokeMethod(FANConstant.ERROR_METHOD, arguments: arg)
     }
 
 
